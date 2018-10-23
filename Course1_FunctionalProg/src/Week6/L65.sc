@@ -74,8 +74,11 @@ object L65 {
                                                   //| ack, bird, to), List(pack, air, fun), List(pack, ah, re, to), List(pack, bi
                                                   //| rd, to), List(Scala, is, fun), List(sack, bird, to))
 
-	def translate(number: String): Set[String] = 
+	def translate(number: String): Set[String] =
 		encode(number) map (_ mkString " ")
+                                                  //> translate: (number: String)Set[String]
 		
-	translate("7225247386") 
+	translate("7225247386")                   //> res2: Set[String] = Set(sack air fun, pack ah re to, pack bird to, Scala ir
+                                                  //| e to, Scala is fun, rack ah re to, pack air fun, sack bird to, rack bird to
+                                                  //| , sack ah re to, rack air fun)
 }
